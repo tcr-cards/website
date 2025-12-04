@@ -1,5 +1,6 @@
 import { Component, input } from '@angular/core';
 import { ProgressBar } from '../progress-bar/progress-bar';
+import { BannerInfo } from './interfaces/banner-info.interface';
 
 @Component({
   selector: 'app-banner',
@@ -8,10 +9,6 @@ import { ProgressBar } from '../progress-bar/progress-bar';
   styleUrl: './banner.scss',
 })
 export class Banner {
-  type = input.required<'large' | 'small'>();
-  bgImage = input<string>('');
-  bannerImage = input<string>('');
-  total = input<number>(0);
-  completed = input<number>(0);
-  bannerDescription = input<string | undefined>(undefined);
+  type = input<'large' | 'small'>('large');
+  bannerInfo = input.required<BannerInfo>();
 }

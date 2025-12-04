@@ -1,16 +1,17 @@
+@let info = bannerInfo();
 <div
   class="banner"
   [class]="'banner--' + type()"
-  [style.background-image]="'url(' + bgImage() + ')'"
+  [style.background-image]="'url(' + info.bgImage + ')'"
 >
   <div class="banner__content">
-    <img [src]="bannerImage()" alt="Banner Logo" class="banner__logo" />
+    <img [src]="info.bannerImage" alt="Banner Logo" class="banner__logo" />
     <div class="banner__progress">
       <app-progress-bar
-        [total]="total()"
-        [completed]="completed()"
-        [description]="bannerDescription()"
-        [countPosition]="type() === 'large' ? 'top' : 'right'"
+        [total]="info.total"
+        [completed]="info.completed"
+        [description]="info.bannerDescription"
+        [countPosition]="type() === 'large' ? 'right' : 'top'"
       />
     </div>
   </div>

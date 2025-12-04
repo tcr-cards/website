@@ -1,0 +1,5 @@
+<div class="banner-list" [class]="'banner-list--' + type()">
+  @for (banner of banners(); track banner) {
+    <app-banner [bannerInfo]="banner" [type]="type() === 'grid' ? 'small' : 'large'" />
+  }
+</div>

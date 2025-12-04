@@ -5,23 +5,6 @@
     [countPosition]="'top'"
     description="Description"
   />
-  <h2 [style.color]="'#fff'">Large Banner</h2>
-  <app-banner
-    type="large"
-    bgImage="https://placehold.co/600x400/purple/white"
-    bannerImage="https://placehold.co/200x100/orange/white?text=LOGO"
-    [total]="300"
-    [completed]="132"
-    bannerDescription="Inferno X"
-  />
-
-  <h2 [style.color]="'#fff'">Small Banner</h2>
-  <app-banner
-    type="small"
-    bgImage="https://placehold.co/800x200/darkblue/white"
-    bannerImage="https://placehold.co/100x50/orange/white?text=LOGO"
-    bannerDescription="Inferno X"
-    [total]="300"
-    [completed]="132"
-  />
+  <app-banner-list [banners]="banners" type="list" />
+  <app-banner-list [banners]="banners" type="grid" />
 </div>
