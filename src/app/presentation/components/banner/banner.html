@@ -1,0 +1,17 @@
+<div
+  class="banner"
+  [class]="'banner--' + type()"
+  [style.background-image]="'url(' + bgImage() + ')'"
+>
+  <div class="banner__content">
+    <img [src]="bannerImage()" alt="Banner Logo" class="banner__logo" />
+    <div class="banner__progress">
+      <app-progress-bar
+        [total]="total()"
+        [completed]="completed()"
+        [description]="bannerDescription()"
+        [countPosition]="type() === 'large' ? 'top' : 'right'"
+      />
+    </div>
+  </div>
+</div>

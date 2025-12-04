@@ -5,9 +5,18 @@
     </div>
   </div>
 
-  <div class="count-text">{{ completed() }} / {{ total() }}</div>
+  @if (isHorizontal()) {
+    <div class="text-group">
+      <div class="count-text">{{ completed() }} / {{ total() }}</div>
+      @if (description()) {
+        <div class="description">{{ description() }}</div>
+      }
+    </div>
+  } @else {
+    <div class="count-text">{{ completed() }} / {{ total() }}</div>
+  }
 </div>
 
-@if (description()) {
+@if (!isHorizontal() && description()) {
   <div class="description">{{ description() }}</div>
 }

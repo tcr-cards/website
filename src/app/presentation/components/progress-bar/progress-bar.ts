@@ -15,4 +15,9 @@ export class ProgressBar {
     const total = this.total();
     return total ? Math.min(100, Math.max(0, (this.completed() / total) * 100)) : 0;
   });
+
+  isHorizontal = computed(() => {
+    const pos = this.countPosition();
+    return pos === 'left' || pos === 'right';
+  });
 }
