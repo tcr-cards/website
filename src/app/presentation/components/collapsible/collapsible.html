@@ -1,0 +1,20 @@
+<div class="collapsible">
+  <div
+    class="collapsible__header"
+    (click)="isExpanded.set(!isExpanded())"
+    role="button"
+    [attr.aria-expanded]="isExpanded()"
+    tabindex="0"
+  >
+    <span class="collapsible__title">{{ title() }}</span>
+    <lucide-icon [img]="isExpanded() ? icons.ChevronUp : icons.ChevronDown" [size]="32" />
+  </div>
+  <div
+    #listEl
+    class="collapsible__content"
+    [class.collapsible__content--expanded]="isExpanded()"
+    [attr.aria-hidden]="!isExpanded()"
+  >
+    <ng-content />
+  </div>
+</div>
