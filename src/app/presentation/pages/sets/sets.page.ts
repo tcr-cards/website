@@ -7,7 +7,7 @@ import { Collapsible } from '../../components/collapsible/collapsible';
   selector: 'app-sets',
   imports: [BannerList, Collapsible],
   templateUrl: './sets.page.html',
-  styleUrl: './sets.page.scss',
+  styleUrl: './sets.page.scss'
 })
 export class Sets {
   banners = bannerInfoMockList();

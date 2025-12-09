@@ -18,8 +18,13 @@ lucide-icon {
   justify-content: center;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
-  width: 100%;
+  display: block;
   height: 100%;
+  width: 100%;
 }
