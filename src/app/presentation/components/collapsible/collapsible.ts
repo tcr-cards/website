@@ -1,10 +1,11 @@
 import { Component, effect, ElementRef, input, signal, viewChild } from '@angular/core';
 import gsap from 'gsap';
 import { ChevronDown, ChevronUp, LucideAngularModule } from 'lucide-angular';
+import { Chip } from '../chip/chip';
 
 @Component({
   selector: 'app-collapsible',
-  imports: [LucideAngularModule],
+  imports: [LucideAngularModule, Chip],
   templateUrl: './collapsible.html',
   styleUrl: './collapsible.scss',
 })

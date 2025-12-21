@@ -7,7 +7,10 @@
     tabindex="0"
   >
     <span class="collapsible__title">{{ title() }}</span>
-    <lucide-icon [img]="isExpanded() ? icons.ChevronUp : icons.ChevronDown" [size]="32" />
+    <div class="collapsible__actions">
+      <app-chip text="Ver set" />
+      <lucide-icon [img]="isExpanded() ? icons.ChevronUp : icons.ChevronDown" [size]="32" />
+    </div>
   </div>
   <div
     #listEl
