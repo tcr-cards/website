@@ -1,0 +1,21 @@
+.chip {
+  border-radius: 100px;
+  padding: 0.25rem 0.5rem;
+  font-size: small;
+  cursor: pointer;
+
+  &--red {
+    background-color: #ff4d4d;
+    color: #fff;
+  }
+
+  &--blue {
+    background-color: #dbe9ff;
+    color: #0057db;
+  }
+
+  &--yellow {
+    background-color: #fff2d1;
+    color: #ff9800;
+  }
+}
