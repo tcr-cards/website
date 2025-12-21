@@ -1,0 +1,13 @@
+@let bannerInfo = info();
+<div class="featuring-banner-container">
+  <div class="featuring-banner" [style.background-image]="'url(' + bannerInfo.bgImage + ')'">
+    <div class="featuring-banner__content">
+      <img [src]="bannerInfo.logoImage" alt="Banner Logo" class="featuring-banner__logo" />
+    </div>
+  </div>
+  @if (showButton()) {
+    <button class="featuring-banner__button" (click)="viewSet.emit(bannerInfo.setId)">
+      Ver set
+    </button>
+  }
+</div>
