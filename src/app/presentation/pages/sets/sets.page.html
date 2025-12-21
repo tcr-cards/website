@@ -1,8 +1,15 @@
 <div class="sets">
+  <app-featuring-banner [info]="featuringBannerInfo" (viewSet)="onViewSet($event)" />
   <app-collapsible title="Mega evolutions List">
     <app-banner-list [banners]="banners" type="list" />
   </app-collapsible>
   <app-collapsible title="Mega evolutions Grid">
     <app-banner-list [banners]="banners" type="grid" />
   </app-collapsible>
+  <div class="card-grid">
+    <app-card [card]="card"></app-card>
+    <app-card [card]="card"></app-card>
+    <app-card [card]="card"></app-card>
+    <app-card [card]="card"></app-card>
+  </div>
 </div>
