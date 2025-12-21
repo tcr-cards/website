@@ -1,0 +1,14 @@
+<div class="card-container">
+  <div class="card">
+    <img [src]="card().image" alt="" />
+  </div>
+  <div class="card__footer">
+    <div class="card__info">
+      <span class="card__name">{{ card().name }}</span>
+      <span class="card__caption">{{ card().rarity.name }} {{ card().code }}</span>
+    </div>
+    @if (showSet()) {
+      <app-chip class="card__set" [text]="card().set.name" />
+    }
+  </div>
+</div>
